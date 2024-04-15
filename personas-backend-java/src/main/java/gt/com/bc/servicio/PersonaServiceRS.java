@@ -2,6 +2,7 @@ package gt.com.bc.servicio;
 
 import gt.com.bc.data.PersonaDao;
 import gt.com.bc.domain.Persona;
+import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
 
@@ -26,6 +27,9 @@ public class PersonaServiceRS {
     public List<Persona> listarPersonas(){
         List<Persona> personas = personaDao.encontrarTodasPersonas();
         System.out.println("personas = " + personas);
+        /*System.out.println("GET");
+        List<Persona> personas = new ArrayList<>();
+        */
         return personas;
     }
     
